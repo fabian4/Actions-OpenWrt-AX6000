@@ -1,7 +1,7 @@
 # 借助 GitHub Actions 的 OpenWrt 在线自动编译.
 
 ### 固件发布:
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/fabian4/Actions-OpenWrt-AX6000?style=for-the-badge&label=固件下载)](https://github.com/fabian4/Actions-OpenWrt-AX6000/releases/latest)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/fabian4/Actions-OpenWrt-AX6000?label=固件下载)](https://github.com/fabian4/Actions-OpenWrt-AX6000/releases/latest)
 
 #### 固件源码来源
 - openwrt-[openwrt/openwrt](https://github.com/openwrt/openwrt).
