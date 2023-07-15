@@ -18,6 +18,10 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
+      release:
+        description: 'release a version'
+        required: false
+        default: 'false'
 
 env:
   REPO_URL: https://github.com/hanwckf/immortalwrt-mt798x
@@ -26,7 +30,6 @@ env:
   CONFIG_FILE: hanwckf/.config
   DIY_P1_SH: hanwckf/diy-part1.sh
   DIY_P2_SH: hanwckf/diy-part2.sh
-  SSH_ACTIONS: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
@@ -133,7 +136,7 @@ jobs:
 
       - name: generate release tag
         id: tag
-        if: env.UPLOAD_RELEASE == 'true' && !cancelled()
+        if: (github.event.inputs.release == 'true' && github.event.inputs.release  != 'false') && !cancelled()
         run: |
           echo "release_tag=${{ env.FILE_DATE }}" >> $GITHUB_OUTPUT
           touch release.txt
