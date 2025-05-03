@@ -22,14 +22,6 @@ git clone -b openwrt-21.02 --single-branch https://github.com/hanwckf/immortalwr
   ```
 - [红米ax6000刷不死uboot](https://blog.w2aa.ga/post/ax6000-uboot.html).
 
-#### Redmi AX6000 不死ubootmod
-- [红米ax6000刷不死ubootmod](https://www.right.com.cn/forum/thread-8272071-1-2.html).
-
-## .config获取
-- [参考lede](https://github.com/coolsnowwolf/lede/issues).
-- ls -a 查看隐藏文件
-- Windows通过 \\wsl$  获取WSL文件
-
 ### 固件初始配置
 - 默认管理IP:`192.168.100.1`
 - 用户名:`root`
