@@ -1,0 +1,25 @@
+name: Test Organize File
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-organize:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Prepare test environment
+        run: |
+          mkdir -p openwrt/bin/targets/test/target
+          cd openwrt/bin/targets/test/target
+          touch firmware1.bin firmware2.bin
+          echo "Simulated firmware files created."
+
+      - name: Organize file
+        run: |
+          cd openwrt/bin/targets/test/target
+          rm -rf packages
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq perl
+          rename 's/.*test/Immortalwrt-2025.05.04-_035509/' *
+          ls -l
